@@ -22,12 +22,10 @@ public class PostController {
         return postService.save(post);
     }
 
-    /*
+
     @GetMapping("/{id}")
     public ArrayList<Post> findByUserId(@PathVariable Long id) {
         return (ArrayList<Post>) postService.findByUserId(id);
     }
-
-     */
 
 }
