@@ -16,7 +16,7 @@ public class User {
     private String name;
 
     @Column(nullable = false, length = 200)
-    private String surname;
+    private String apellidoPaterno;
 
     @Column(nullable = true, length = 255)
     private String address;
@@ -45,12 +45,12 @@ public class User {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
     }
 
     public String getAddress() {
