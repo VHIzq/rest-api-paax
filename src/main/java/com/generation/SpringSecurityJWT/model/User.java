@@ -13,18 +13,21 @@ public class User {
     private Long id;
 
     @Column(nullable = false, length = 200)
-    private String name;
+    private String nombre;
 
     @Column(nullable = false, length = 200)
     private String apellidoPaterno;
 
-    @Column(nullable = true, length = 255)
-    private String address;
+    @Column(nullable = false, length = 200)
+    private String apellidoMaterno;
 
-    @Column(name = "email", unique = true)
-    private String username;
+    @Column(nullable = false, unique = true)
+    private String email;
 
-    private String password;
+    @Column(nullable = false, length = 200)
+    private String nombreUsuario;
+
+    private String contrasenia;
 
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
@@ -37,12 +40,12 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellidoPaterno() {
@@ -53,28 +56,36 @@ public class User {
         this.apellidoPaterno = apellidoPaterno;
     }
 
-    public String getAddress() {
-        return address;
+    public String getApellidoMaterno() {
+        return apellidoMaterno;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
     }
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasenia = contrasenia;
     }
 
     public List<Post> getPosts() {
