@@ -3,7 +3,6 @@ package com.generation.SpringSecurityJWT.service;
 import com.generation.SpringSecurityJWT.model.Post;
 import com.generation.SpringSecurityJWT.model.User;
 import com.generation.SpringSecurityJWT.repository.PostRepository;
-import javafx.geometry.Pos;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
